@@ -1,0 +1,44 @@
+<%- include('header') -%>
+    <link rel="stylesheet" href="/css/item-list.css">
+    <link rel="stylesheet" href="/css/games.css">
+</head>
+
+<body>
+    <div class="container games-container">
+        <header>
+            <h1>
+                <% if (typeof player === 'undefined') { %>
+                    Játszmák
+                <% }else{ %>
+                    <%= player.name %> játszmái
+                <% } %>
+            </h1>
+            <a class="back-btn" href="/">Vissza</a>
+        </header>
+        <main>
+            <a class="add-btn" href="/game/new/<%= player._id %>">Új játszma hozzáadása</a>
+            <table class="table games-table">
+                <thead>
+                    <tr>
+                        <th>Szín</th>
+                        <th>Lépésszám</th>
+                        <th>Eredmény</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(let i = 0; i < games.length; i++) { const game = games[i]; %>
+                    <tr>
+                        <td><%= game.color %></td>
+                        <td><%= game.move_count %></td>
+                        <td><%= game.result %></td>
+                        <td><a class="table-btn" href="/game/edit/<%= player._id %>/<%= game._id %>">Módosítás</a></td>
+                        <td><a class="table-btn delete-btn" href="/game/delete/<%= player._id %>/<%= game._id %>">Törlés</a></td>
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </main>
+    </div>
+    <%- include('footer') -%>

@@ -1,0 +1,41 @@
+<%- include('header') -%>
+    <link rel="stylesheet" href="/css/form.css">
+    <link rel="stylesheet" href="/css/player-form.css">
+</head>
+
+<body>
+    <div class="container form-container">
+        <header>
+            <h1>
+                <% if (typeof player === 'undefined') { %>
+                    Add meg az új játékos adatait!
+                <% }else{ %>
+                    <%= player.name %> adatainak módosítása
+                <% } %>
+            </h1>
+            <a class="back-btn" href="/">Vissza</a>
+        </header>
+        <main>
+            <form method="POST">
+                <div class="form-row">
+                    <label for="name">Név:</label>
+                    <input type="text" id="name" name="name"
+                        value="<%= (typeof player === 'undefined') ? '' : player.name %>">
+                </div>
+                <div class="form-row">
+                    <label for="birth-year">Születési év:</label>
+                    <input type="number" id="birth-year" name="birth_year" min="1" max="2024"
+                        value="<%= (typeof player === 'undefined') ? '' : player.birth_year %>">
+                </div>
+                <div class="form-row">
+                    <label for="rating">Értékszám:</label>
+                    <input type="number" id="rating" name="rating" min="0" max="4000"
+                        value="<%= (typeof player === 'undefined') ? '' : player.rating %>">
+                </div>
+                <div class="right-aligner">
+                    <input type="submit" class="save-btn" value="Mentés"/>
+                </div>
+            </form>
+        </main>
+    </div>
+    <%- include('footer') -%>

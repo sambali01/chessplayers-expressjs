@@ -1,0 +1,39 @@
+<%- include('header') -%>
+    <link rel="stylesheet" href="/css/item-list.css">
+    <link rel="stylesheet" href="/css/players.css">
+</head>
+
+<body>
+    <div class="container item-list-container players-container">
+        <header>
+            <h1>Játékosok</h1>
+        </header>
+        <main>
+            <a class="add-btn" href="/player/new">Új játékos felvétele</a>
+            <table class="table players-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Név</th>
+                        <th>Születési év</th>
+                        <th>Értékszám</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                <% for(let i = 0; i < players.length; i++) { const player = players[i]; %>
+                    <tr>
+                        <td><a class="table-btn" href="/gamelist/<%= player._id %>">Játszmák</a></td>
+                        <td><%= player.name %></td>
+                        <td><%= player.birth_year %></td>
+                        <td><%= player.rating %></td>
+                        <td><a class="table-btn" href="/player/edit/<%= player._id %>">Módosítás</a></td>
+                        <td><a class="table-btn delete-btn" href="/player/delete/<%= player._id %>">Törlés</a></td>
+                    </tr>
+                <% } %>
+                </tbody>
+            </table>
+        </main>
+    </div>
+    <%- include('footer') -%>

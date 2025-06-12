@@ -1,0 +1,70 @@
+/* Általános stílusok */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Fejléc stílusok */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+/* Cím stílusok */
+h1 {
+    font-size: 2.5rem;
+    color: #003366;
+    margin: 0;
+}
+
+/* Konténer stílusok */
+.container {
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Gomboknál aláhúzás eltávolítása és gombszerű viselkedés beállítása */
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Vissza gomb stílusok */
+.back-btn {
+    background-color: #666666;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.back-btn:hover {
+    background-color: #444444;
+}
+
+/* Lábjegyzet stílusok */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px 0;
+    color: #777777;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}

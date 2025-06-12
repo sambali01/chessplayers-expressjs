@@ -1,0 +1,50 @@
+/* Form konténer szélessége */
+.form-container {
+    max-width: 800px;
+    position: relative
+}
+
+/* Form sor stílusok */
+.form-row {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Form címke stílusok */
+label {
+    font-size: 1.1rem;
+    margin-right: 10px;
+    width: 150px;
+}
+
+/* Form beviteli mező stílusok */
+input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Mentés gomb stílusok */
+.right-aligner {
+    text-align: right;
+}
+
+.save-btn {
+    background-color: #007acc;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.save-btn:hover {
+    background-color: #005a99;
+}

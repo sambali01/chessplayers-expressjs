@@ -1,0 +1,19 @@
+/* Játékosok konténere */
+.players-container {
+    max-width: 1200px;
+}
+
+/* Oszlopok szélessége */
+.players-table td:first-child,
+.players-table td:last-child {
+    width: 10%;
+}
+
+.players-table td:nth-child(2) {
+    width: 30%;
+}
+
+.players-table td:nth-child(3),
+.players-table td:nth-child(4) {
+    width: 25%;
+}

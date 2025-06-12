@@ -1,0 +1,58 @@
+<%- include('header') -%>
+    <link rel="stylesheet" href="/css/form.css">
+    <link rel="stylesheet" href="/css/game-form.css">
+    <script src="/js/game-form.js" defer></script>
+</head>
+
+<body>
+    <div class="container form-container">
+        <header>
+            <h1>
+                <% if (typeof game === 'undefined') { %>
+                    Add meg az új játszma adatait!
+                <% }else{ %>
+                    Játszma adatainak módosítása
+                <% } %>
+            </h1>
+            <a class="back-btn" href="/gamelist/<%= player._id %>">Vissza</a>
+        </header>
+        <main>
+            <form method="POST">
+                <div class="form-row">
+                    <label for="color">Szín:</label>
+                    <div id="color-options">
+                        <% validColors.forEach(function(color) { %>
+                            <div class="color-option" data-color="<%= color %>" 
+                                 class="<%= (typeof game !== 'undefined' && game.color === color) ? 'selected' : '' %>">
+                                 <%= color %>
+                            </div>
+                        <% }); %>
+                    </div>
+                    <!-- Rejtett input a színhez, amit a form elküld -->
+                    <input type="hidden" id="color-input" name="color" value="<%= (typeof game === 'undefined') ? '' : game.color %>">
+                </div>
+                <div class="form-row">
+                    <label for="move-count">Lépésszám:</label>
+                    <input class="move-count-input" type="number" id="move-count" name="move_count" min="1" max="999"
+                        value="<%= (typeof game === 'undefined') ? '' : game.move_count %>">
+                </div>
+                <div class="form-row">
+                    <label for="result">Eredmény:</label>
+                    <div id="result-options">
+                        <% validResults.forEach(function(result) { %>
+                            <div class="result-option" data-result="<%= result %>" 
+                                 class="<%= (typeof game !== 'undefined' && game.result === result) ? 'selected' : '' %>">
+                                 <%= result %>
+                            </div>
+                        <% }); %>
+                    </div>
+                    <!-- Rejtett input az eredményhez, amit a form elküld -->
+                    <input type="hidden" id="result-input" name="result" value="<%= (typeof game === 'undefined') ? '' : game.result %>">
+                </div>
+                <div class="right-aligner">
+                    <input type="submit" class="save-btn" value="Mentés"/>
+                </div>
+            </form>
+        </main>
+    </div>
+    <%- include('footer') -%>

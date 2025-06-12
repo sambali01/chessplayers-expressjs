@@ -1,0 +1,9 @@
+/* Szövegdobozok szélessége */
+#name {
+    width: 240px;
+}
+
+#birth-year,
+#rating {
+    width: 60px;
+}

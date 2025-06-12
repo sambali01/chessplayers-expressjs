@@ -1,0 +1,68 @@
+Oldalak
+
+- index.html: játékosok listája táblázatban a játszmákat megjelenítő, a módosító és a törlő gombbal, új játékos gomb
+- player-form.html: egy játékos adatainak módosítása vagy új játékos adatainak megadása a mentés és a vissza gombbal
+- games.html: egy játékos játszmáinak listája táblázatban a módosító és a törlő gombbal, új játszma gomb
+- game-form.html: egy játszma adatainak módosítása vagy új játszma adatainak megadása a mentés és a vissza gombbal
+
+
+Middlewares
+
+middleware/render/
+    renderMW.js
+
+middleware/player/
+    getPlayersMW.js
+    getPlayerMW.js
+    savePlayerMW.js
+    deletePlayerMW.js
+
+middleware/game/
+    getGamesMW.js
+    getGameMW.js
+    saveGameMW.js
+    deleteGameMW.js
+    getGameConstantsMW.js
+
+
+Routing
+
+GET /
+    getPlayersMW
+    renderMW(players.ejs)
+
+GET, POST /player/new
+    savePlayerMW
+    renderMW(player-form.ejs)
+
+GET, POST /player/edit/:playerid
+    getPlayerMW
+    savePlayerMW
+    renderMW(player-form.ejs)
+
+GET /player/delete/:playerid
+    getPlayerMW
+    deletePlayerMW
+
+GET /gamelist/:playerid
+    getPlayerMW
+    getGamesMW
+    renderMW(games.ejs)
+
+GET, POST /game/new/:playerid
+    getGameConstantsMW
+    getPlayerMW
+    saveGameMW
+    renderMW(game-form.ejs)
+
+GET, POST /game/edit/:playerid/:gameid
+    getGameConstantsMW
+    getPlayerMW
+    getGameMW
+    saveGameMW
+    renderMW(game-form.ejs)
+
+GET /game/delete/:playerid/:gameid
+    getPlayerMW
+    getGameMW
+    deleteGameMW

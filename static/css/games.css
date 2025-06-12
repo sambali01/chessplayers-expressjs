@@ -1,0 +1,23 @@
+/* Játszmák konténere */
+.games-container {
+    max-width: 900px;
+}
+
+/* Oszlopok szélessége */
+.games-table td:first-child,
+.games-table td:last-child {
+    width: 10%;
+}
+
+.games-table td:nth-child(2) {
+    width: 20%;
+}
+
+.games-table td:nth-child(3) {
+    width: 20%;
+}
+
+.games-table td:nth-child(4),
+.games-table td:nth-child(5) {
+    width: 25%;
+}

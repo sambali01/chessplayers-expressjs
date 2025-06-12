@@ -1,0 +1,82 @@
+/* Konténer stílusok */
+.item-list-container {
+    overflow: hidden;
+    position: relative;
+}
+
+/* Táblázat stílusok */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.table th,
+.table td {
+    padding: 15px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.table th {
+    background-color: #003366;
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+.table tr:nth-child(even) {
+    background-color: #e6f2ff;
+}
+
+.table tr:hover {
+    background-color: #cce4ff;
+}
+
+/* Táblázatban szerplő gomb stílusok */
+.table-btn {
+    background-color: #005a99;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 3px;
+    border: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+/* Gomb stílusok */
+.add-btn {
+    background-color: #007acc;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    margin-left: 0;
+}
+
+.add-btn:hover {
+    background-color: #005a99;
+}
+
+.table-btn:hover {
+    background-color: #003366;
+}
+
+.delete-btn {
+    background-color: #cc0000;
+}
+
+.delete-btn:hover {
+    background-color: #990000;
+}

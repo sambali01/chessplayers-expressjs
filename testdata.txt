@@ -1,0 +1,63 @@
+res.locals.game = {
+    _id: '1111',
+    color: 'Világos',
+    move_count: 35,
+    result: 'Győzelem'
+}
+
+res.locals.games =
+    [
+        {
+            _id: '1111',
+            color: 'Világos',
+            move_count: 35,
+            result: 'Győzelem'
+        },
+        {
+            _id: '2222',
+            color: 'Sötét',
+            move_count: 42,
+            result: 'Döntetlen'
+        },
+        {
+            _id: '3333',
+            color: 'Sötét',
+            move_count: 21,
+            result: 'Győzelem'
+        },
+        {
+            _id: '4444',
+            color: 'Világos',
+            move_count: 29,
+            result: 'Vereség'
+        }
+    ]
+
+res.locals.player = {
+    _id: 'aaaa',
+    name: 'Magnus Carlsen',
+    birth_year: 1990,
+    rating: 2831
+}
+
+res.locals.players =
+    [
+        {
+            _id: 'aaaa',
+            name: 'Magnus Carlsen',
+            birth_year: 1990,
+            rating: 2831
+        },
+        {
+            _id: 'bbbb',
+            name: 'Hikaru Nakamura',
+            birth_year: 1987,
+            rating: 2802
+        },
+        {
+            _id: 'cccc',
+            name: 'Arjun Erigaisi',
+            birth_year: 2003,
+            rating: 2797
+        }
+    ]

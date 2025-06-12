@@ -1,0 +1,37 @@
+/* Szélesség beállítása a lépésszámhoz */
+.move-count-input {
+    width: 50px;
+}
+
+/* Opciók stílusai */
+#color-options, #result-options {
+    display: flex;
+}
+
+.color-option, .result-option {
+    padding: 10px 15px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.color-option:not(.selected):hover, 
+.result-option:not(.selected):hover {
+    background-color: #e6f2ff;
+    transition: background-color 0.3s;
+}
+
+.selected {
+    background-color: #007acc;
+    color: white;
+    border: 2px solid #005a99;
+}
+
+.selected:hover {
+    background-color: #005a99;
+    color: white;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgba(0, 90, 153, 0.5);
+}
